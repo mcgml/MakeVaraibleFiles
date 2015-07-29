@@ -30,6 +30,5 @@ public class Main {
         //make pipeline config files
         PipelineConfigFileMaker.makeIlluminaConfigFile(illuminaSampleSheetFile, illuminaRunParametersFile);
 
-
     }
 }
