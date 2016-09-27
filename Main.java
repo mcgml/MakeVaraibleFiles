@@ -10,12 +10,13 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Main {
 
-    private static final String version = "2.1.0";
+    private static final String version = "2.1.1";
     private static final Logger log = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
@@ -42,7 +43,7 @@ public class Main {
             //make pipeline config files
             PipelineConfigFileMaker.makeIlluminaConfigFile(illuminaSampleSheetFile, runIdentifier);
 
-        } catch (Exception e){
+        } catch (IOException e){
             log.log(Level.SEVERE, e.getMessage());
             System.exit(-1);
         }
